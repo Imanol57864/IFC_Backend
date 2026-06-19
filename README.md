@@ -70,7 +70,7 @@ tar -xzf ~/migration01/storage.tar.gz -C ~/IFC_Backend/volumes
 tar -xzf ~/migration01/data.tar.gz -C ~/IFC_Backend/volumes/db
 
 # después de copiar .env, levanta docker
-docker exec -i supabase-db pg_restore -U **supabase_admin** -d postgres < ~/migration01/myfirstbackup.dump
+docker exec -i supabase-db pg_restore -U supabase_admin -d postgres < ~/migration01/myfirstbackup.dump
 ```
 
 Y luego solamente:
