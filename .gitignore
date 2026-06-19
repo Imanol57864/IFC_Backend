@@ -1,0 +1,6 @@
+volumes/db/data
+volumes/storage
+volumes/snippets
+.env*
+test.http
+docker-compose.yml
