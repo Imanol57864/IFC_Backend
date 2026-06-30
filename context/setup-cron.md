@@ -6,6 +6,9 @@
 apt install cron
 sudo systemctl status cron
 
+# check the system's datetime
+timedatectl
+
 # create a new task (a cron tab)
 crontab -e
 
