@@ -4,6 +4,7 @@
 # PRE-REQUISITOS
 # ==========================================
 
+# chmod +x cron-backup.sh
 # sudo apt update
 # sudo apt install awscli gpg tar -y
 # digital ocean cold storage key
@@ -21,7 +22,7 @@ DB_NAME="supabase-db"
 BACKUP_DIR="/tmp/db_backups"
 FECHA=$(date +%Y-%m-%d_%H-%M-%S)
 NOMBRE_RESPALDO="backup_${DB_NAME}_${FECHA}"
-BACKEND_DIR="/home/ubuntu/IFC_Backend" # /home/ubuntu = ~/
+BACKEND_DIR="/root/IFC_Backend" # /root = ~/
 
 # Configuración de DigitalOcean Spaces
 DO_SPACE_NAME="ifc-backups-01"
