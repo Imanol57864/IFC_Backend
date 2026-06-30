@@ -91,6 +91,7 @@ unset AWS_DEFAULT_REGION
 rm -f ${BACKUP_DIR}/storage.tar.gz
 rm -f ${BACKUP_DIR}/data.tar.gz
 rm -f ${BACKUP_DIR}/${NOMBRE_RESPALDO}.tar
+rm -f ${BACKUP_DIR}/${NOMBRE_RESPALDO}.tar.gpg
 
 # Restablecer el servicio de docker backend
 docker compose up -d

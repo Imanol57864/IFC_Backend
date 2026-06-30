@@ -21,7 +21,7 @@ git --version
 # subnet compose
 docker network create ifc
 
-# aws cli plugin
+# backups plugin
 sudo apt install unzip gpg tar -y
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
