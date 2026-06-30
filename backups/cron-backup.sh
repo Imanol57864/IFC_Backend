@@ -76,11 +76,11 @@ export AWS_ACCESS_KEY_ID="${DO_ACCESS_KEY}"
 export AWS_SECRET_ACCESS_KEY="${DO_SECRET_KEY}"
 export AWS_DEFAULT_REGION="${DO_REGION}"
 
-aws s3 cp \
-    "${BACKUP_DIR}/${NOMBRE_RESPALDO}.tar.gpg" \
-    "s3://${DO_SPACE_NAME}/${NOMBRE_RESPALDO}.tar.gpg" \
-    --endpoint-url="${DO_ENDPOINT}" \
-    --acl private
+aws s3api put-object \
+  --bucket "${DO_SPACE_NAME}" \
+  --key "${NOMBRE_RESPALDO}.tar.gpg" \
+  --body "${BACKUP_DIR}/${NOMBRE_RESPALDO}.tar.gpg" \
+  --endpoint-url="${DO_ENDPOINT}"
 
 unset AWS_ACCESS_KEY_ID
 unset AWS_SECRET_ACCESS_KEY
